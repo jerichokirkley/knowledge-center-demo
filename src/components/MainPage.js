@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, Grid, Paper, LinearProgress, TextField, IconButton } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+// import { Typography, Grid, Paper, LinearProgress, TextField, IconButton } from '@mui/material';
+// import SearchIcon from '@mui/icons-material/Search';
 import LessonCard from './LessonCard';
 import ChatAssistant from './ChatAssistant';
 
