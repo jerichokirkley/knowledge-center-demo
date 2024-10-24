@@ -28,7 +28,7 @@ const Sidebar = () => {
           />
         ))}
       </div>
-      <div className="bottom-options">
+      {/* <div className="bottom-options">
         <NavItem
           icon={FaSignOutAlt}
           label="Logout"
@@ -43,7 +43,7 @@ const Sidebar = () => {
           label="DNEK"
           onClick={() => console.log('Location clicked')}
         />
-      </div>
+      </div> */}
     </nav>
   );
 };
