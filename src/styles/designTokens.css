@@ -2,7 +2,8 @@
   /* Colors */
   --color-primary: #14588c;
   --color-secondary: #fff;
-  --color-background: #f8f8f8;
+  --color-background: #fafafa;
+  --color-background-light: #fff;
   --color-text-primary: #333333;
   --color-text-secondary: #666666;
   --color-text-light: #ffffff;
@@ -30,6 +31,8 @@
   --spacing-medium: 16px;
   --spacing-large: 24px;
   --spacing-xlarge: 32px;
+  --spacing-xxlarge: 48px;
+  --spacing-xxxlarge: 64px;
 
   /* Border Radius */
   --border-radius-small: 4px;

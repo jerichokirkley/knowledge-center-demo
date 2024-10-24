@@ -4,10 +4,10 @@ import LessonProgress from './LessonProgress';
 
 const LessonModules = () => {
   const [lessons, setLessons] = useState([
-    { id: 1, title: "Welcome to Enterprise", description: "Lorem ipsum dolor sit amet consect. Tempor tristique tempor.", timeEstimate: 5, completed: true },
-    { id: 2, title: "Intro to Enterprise", description: "Vulputate semper velit ornare arcu cursus vitae aliquet. Id lacus tristique.", timeEstimate: 10, completed: true },
-    { id: 3, title: "Navigating Around", description: "Elit ut lectus ornare amet purus mi maecenas dolor neque nunc mattis.", timeEstimate: 15, completed: true },
-    { id: 4, title: "Core Resources", description: "Massa facilisis sit posuere diam risus sociis aliquet. Dignissim in tincidunt.", timeEstimate: 20, completed: false },
+    { id: 1, title: "Welcome to Enterprise", description: "Get an overview of the Enterprise platform, explore its key features, and set up your account for success.", timeEstimate: 5, completed: true },
+    { id: 2, title: "Intro to Enterprise", description: "Learn the foundational concepts and navigation techniques that will help you work more efficiently within the Enterprise system.", timeEstimate: 10, completed: true },
+    { id: 3, title: "Navigating Around", description: "Master the layout and navigation of the platform, so you can easily access the tools and resources you need.", timeEstimate: 15, completed: true },
+    { id: 4, title: "Core Resources", description: "Explore the core resources available to help you maximize your productivity and troubleshoot common issues.", timeEstimate: 20, completed: false },
     { id: 5, title: "Intro to Shipping", description: "Faucibus sit sit magna feugiat. Orci lectus hac tempor tempor morbi hac.", timeEstimate: 10, completed: false },
     { id: 6, title: "Shipment Creation", description: "Velit blandit ac vitae nec at libero. Auctor phasellus rhoncus nec mattis.", timeEstimate: 15, completed: false },
     { id: 7, title: "Domestic Shipping", description: "Description for Domestic Shipping.", timeEstimate: 20, completed: false },

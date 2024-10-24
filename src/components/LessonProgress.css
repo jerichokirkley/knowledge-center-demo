@@ -1,20 +1,23 @@
 .lesson-progress {
-  margin-bottom: var(--spacing-xlarge);
-  max-width: 400px;
+  margin-bottom: var(--spacing-xxxlarge);
   width: 100%;
+  background-color: var(--color-background-light);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-medium) var(--spacing-large);
+  box-sizing: border-box;
 }
 
 .lesson-progress h2 {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
   font-weight: var(--font-weight-light);
   color: var(--color-text-primary);
+  margin-top: 0;
   margin-bottom: var(--spacing-small);
 }
 
 .progress-bar {
-  height: 8px;
+  height: 12px;
   background-color: var(--color-border);
-  border-radius: var(--border-radius-small);
   overflow: hidden;
   margin-bottom: var(--spacing-small);
 }

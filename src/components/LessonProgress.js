@@ -11,7 +11,7 @@ const LessonProgress = ({ completed, total }) => {
         <div className="progress-bar">
           <div className="progress" style={{width: `${progressPercentage}%`}}></div>
         </div>
-        <span className="progress-text">{completed} / {total}</span>
+        <span className="progress-text"><strong>{completed} / {total}</strong> lessons completed. Keep it up!</span>
       </div>
     </div>
   );

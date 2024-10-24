@@ -41,6 +41,7 @@ code {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  background-color: var(--color-background);
 }
 
 .content-wrapper {

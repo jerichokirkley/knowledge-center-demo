@@ -15,7 +15,7 @@ function App() {
         <TopBar />
         <main className="content-wrapper">
           <div className="main-content">
-            <SearchInput />
+            {/* <SearchInput /> */}
             <LessonModules />
           </div>
           <ChatAssistant />
