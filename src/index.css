@@ -1,0 +1,324 @@
+@import './styles/designTokens.css';
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_Rg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_Bd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_Lt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_BdIt.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_Cd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdBd.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdBdIt.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdIt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdLt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdLtIt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdMd.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdMdIt.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdXBd.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_CdXBdIt.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_It.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_LtIt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_MdIt.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_XBd.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FedExSans';
+  src: url('./fonts/FedExSans/FedExSans_XBdIt.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Global Styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Layout Styles */
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex-grow: 1;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: var(--spacing-xlarge) var(--spacing-large) var(--spacing-xlarge) var(--spacing-xlarge);
+  overflow-y: auto;
+  width: calc(100% - 400px);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Chat Assistant Styles */
+.chat-assistant {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--color-text-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: var(--font-size-medium);
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-medium);
+}
+
+.message-wrapper {
+  display: flex;
+  margin-bottom: var(--spacing-small);
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.assistant-message {
+  justify-content: flex-start;
+}
+
+.message {
+  max-width: 80%;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius-large);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.user-message .message {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.assistant-message .message {
+  background-color: var(--color-text-light);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.input-form {
+  display: flex;
+  gap: var(--spacing-small);
+  padding: var(--spacing-medium);
+  border-top: 1px solid var(--color-border);
+}
+
+.message-input {
+  flex: 1;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-medium);
+  outline: none;
+}
+
+.message-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(77, 20, 140, 0.2);
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-button:hover {
+  background-color: var(--color-secondary);
+}
+
+.send-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 20, 140, 0.2);
+}
+
+.send-button:disabled,
+.input-form input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

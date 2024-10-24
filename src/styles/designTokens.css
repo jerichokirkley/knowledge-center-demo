@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --color-primary: #14588c;
+  --color-secondary: #fff;
+  --color-background: #f8f8f8;
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-text-light: #ffffff;
+  --color-border: #e0e0e0;
+
+  /* Typography */
+  /* Font family */
+  --font-family: 'FedExSans', sans-serif;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font sizes */
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+  --font-size-xlarge: 18px;
+  --font-size-display: 32px;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xlarge: 32px;
+
+  /* Border Radius */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+}

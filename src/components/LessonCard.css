@@ -1,0 +1,64 @@
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.lesson-card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-large);
+  position: relative;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.lesson-card:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.lesson-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.lesson-card h3 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-small);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-light);
+}
+
+.lesson-card p {
+  font-size: var(--font-size-medium);
+  color: var(--color-text-secondary);
+}
+
+.lesson-card.completed {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.check-icon {
+  position: absolute;
+  top: var(--spacing-small);
+  right: var(--spacing-small);
+  width: 20px;
+  height: 20px;
+  background-color: #4CAF50;
+  color: var(--color-text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-small);
+  pointer-events: none;
+}
+
+/* Removed the following styles to prevent underline on hover
+.lesson-card:hover h3,
+.lesson-card:focus-within h3 {
+  text-decoration: underline;
+}
+*/
