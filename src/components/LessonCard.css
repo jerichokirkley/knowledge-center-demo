@@ -12,6 +12,18 @@
   position: relative;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
+  padding-top: calc(var(--spacing-large) + 20px); /* Increase top padding to accommodate header */
+}
+
+.lesson-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: height 0.3s ease;
 }
 
 .lesson-card:focus-within {
@@ -21,11 +33,14 @@
 
 .lesson-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.lesson-card:hover::after {
+  height: 8px;
 }
 
 .lesson-card h3 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-xlarge);
   margin-bottom: var(--spacing-small);
   color: var(--color-text-primary);
   font-weight: var(--font-weight-light);
@@ -34,31 +49,51 @@
 .lesson-card p {
   font-size: var(--font-size-medium);
   color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-medium);
 }
 
-.lesson-card.completed {
-  border-bottom: 3px solid var(--color-primary);
+.lesson-card.completed::after {
+  height: 2px;
+}
+
+.card-header {
+  position: absolute;
+  top: var(--spacing-small);
+  left: var(--spacing-small);
+  right: var(--spacing-small);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .check-icon {
-  position: absolute;
-  top: var(--spacing-small);
-  right: var(--spacing-small);
   width: 20px;
   height: 20px;
-  background-color: #4CAF50;
-  color: var(--color-text-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-small);
-  pointer-events: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Removed the following styles to prevent underline on hover
-.lesson-card:hover h3,
-.lesson-card:focus-within h3 {
-  text-decoration: underline;
+.check-icon.completed {
+  background-color: #4CAF50;
+  color: var(--color-text-light);
 }
-*/
+
+.check-icon.disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.time-estimate {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-small);
+  padding: 2px 8px;
+  margin-left: 8px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-medium);
+}

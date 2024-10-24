@@ -1,15 +1,17 @@
 import React from 'react';
 import './LessonProgress.css';
 
-const LessonProgress = () => {
+const LessonProgress = ({ completed, total }) => {
+  const progressPercentage = (completed / total) * 100;
+
   return (
     <div className="lesson-progress-container">
       <div className="lesson-progress">
-        <h2>YOUR LESSON PROGRESS</h2>
+        <h2>Your lesson progress</h2>
         <div className="progress-bar">
-          <div className="progress" style={{width: '12%'}}></div>
+          <div className="progress" style={{width: `${progressPercentage}%`}}></div>
         </div>
-        <span className="progress-text">3 / 25</span>
+        <span className="progress-text">{completed} / {total}</span>
       </div>
     </div>
   );

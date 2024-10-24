@@ -16,7 +16,6 @@ function App() {
         <main className="content-wrapper">
           <div className="main-content">
             <SearchInput />
-            <LessonProgress />
             <LessonModules />
           </div>
           <ChatAssistant />
