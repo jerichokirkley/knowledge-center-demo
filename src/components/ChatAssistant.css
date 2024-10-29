@@ -1,15 +1,20 @@
+/* Main container for the chat assistant */
 .chat-assistant {
+  display: flex;
+  flex-direction: column;
   width: 30%;
   min-width: 320px;
   max-width: 720px;
+  height: 100%;
   border-left: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
   background-color: var(--color-background-light);
   overflow: hidden;
-  height: 100%;
+  position: relative;
+  z-index: 2;
+  font-size: var(--font-size-medium);
 }
 
+/* Header section containing title */
 .chat-header {
   display: flex;
   justify-content: space-between;
@@ -19,133 +24,70 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+/* Header title styling */
 .chat-header h3 {
   margin: 0;
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-light);
 }
 
-/* Expand button not in use */
-/* .expand-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--spacing-small);
-}
-
-.expand-button svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-primary);
-} */
-
-/* .expand-button:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-} */
-
+/* Messages container with scrolling */
 .chat-messages {
   flex-grow: 1;
   overflow-y: auto;
   padding: var(--spacing-medium);
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-medium);
 }
 
-.assistant-message,
-.user-message {
+/* Empty state message when no chat history */
+.empty-state {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-medium);
+}
+
+/* Container for individual message bubbles */
+.message-wrapper {
   display: flex;
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-small);
 }
 
-.assistant-message {
-  justify-content: flex-start;
-  line-height: 1.6;
-}
-
+/* User message alignment and styling */
 .user-message {
   justify-content: flex-end;
   line-height: 1.2;
 }
 
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  margin-right: var(--spacing-small);
+/* Assistant message alignment */
+.assistant-message {
+  justify-content: flex-start;
 }
 
-.message-content {
+/* Common message bubble styling */
+.message {
   max-width: 80%;
   padding: var(--spacing-small) var(--spacing-medium);
   border-radius: var(--border-radius-large);
-  font-size: var(--font-size-medium);
-  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-.assistant-message .message {
-  background-color: var(--color-primary-light);
-  color: var(--color-text-primary);
-}
-
+/* User message bubble specific styling */
 .user-message .message {
   background-color: var(--color-primary-dark);
   color: var(--color-text-light);
 }
 
-.chat-input {
-  display: flex;
-  padding: var(--spacing-medium);
-  background-color: var(--color-text-light);
-  border-top: 1px solid var(--color-border);
-}
-
-input {
-  font-family: var(--font-family);
-}
-
-.chat-input input {
-  flex-grow: 1;
-  padding: var(--spacing-small);
+/* Assistant message bubble specific styling */
+.assistant-message .message {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-primary);
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-large);
-  font-size: var(--font-size-medium);
 }
 
-.chat-input input:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-.chat-input button {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: var(--spacing-small);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.chat-input button svg {
-  width: 16px;
-  height: 16px;
-}
-
-.chat-input button i {
-  font-size: var(--font-size-large);
-}
-
-.chat-input button:focus {
-  outline: 2px solid var(--color-text-light);
-  outline-offset: 2px;
-}
-
+/* Loading state container */
 .loading {
   display: flex;
   align-items: center;
@@ -153,6 +95,7 @@ input {
   min-height: 16px;
 }
 
+/* Loading spinner animation */
 .loading-indicator {
   width: 16px;
   height: 16px;
@@ -162,13 +105,66 @@ input {
   animation: spin 1s linear infinite;
 }
 
+/* Keyframes for loading spinner rotation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-.input-form input:disabled,
-.input-form button:disabled {
+/* Input form container at bottom */
+.input-form {
+  display: flex;
+  gap: var(--spacing-small);
+  padding: var(--spacing-medium);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Text input field styling */
+.message-input {
+  flex: 1;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-medium);
+  outline: none;
+}
+
+/* Input field focus state */
+.message-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(77, 20, 140, 0.2);
+}
+
+/* Send button styling */
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Send button hover state */
+.send-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Send button focus state */
+.send-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 20, 140, 0.2);
+}
+
+/* Disabled states for input and button */
+.send-button:disabled,
+.input-form input:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
