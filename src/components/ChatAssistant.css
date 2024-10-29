@@ -57,7 +57,6 @@
 /* User message alignment and styling */
 .user-message {
   justify-content: flex-end;
-  line-height: 1.2;
 }
 
 /* Assistant message alignment */
@@ -78,6 +77,7 @@
 .user-message .message {
   background-color: var(--color-primary-dark);
   color: var(--color-text-light);
+  line-height: 1.2;
 }
 
 /* Assistant message bubble specific styling */
@@ -85,6 +85,7 @@
   background-color: var(--color-primary-light);
   color: var(--color-text-primary);
   border: 1px solid var(--color-border);
+  line-height: 1.5;
 }
 
 /* Loading state container */
